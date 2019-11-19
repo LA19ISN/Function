@@ -1,0 +1,26 @@
+#Cette fonction demande les valeurs voulues
+def Entree():
+    print ('Quel est le coefficient directeur?')
+    m=int(input())
+    print ("Quel est l'ordonnée à l'origine?")
+    p=int(input())
+    return m,p
+
+#Cette fonction fait un calcul puis assigne le résultat à une valeur
+def Metier(m,x,p):
+    y= m*x+p
+    return y
+
+#Celle-ci montre le résultat avec une phrase auparavant
+def Sortie(y):
+    print ("l'ordonnée du point à x est",y)
+
+#On appelle la fonction pour obtenir les variables
+m,p=Entree()
+
+#Puis on fait une boucle avec la fonction de calcul et celle pour montrer
+#le résultat pour avoir toutes les résultats de x=0 à 10
+for x in range (0, 10):
+    print ('Pour x=',x)
+    y=Metier(m,x,p)
+    Sortie(y)
